@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrain Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="tactical-menu-dock panel-open">
+
+        <div id="categoryRail" class="category-rail"></div>
+
+        <div class="tool-drawer">
+
+            <div id="panelHeaderContainer"></div>
+
+            <div id="dynamicPanelContent"></div>
+
+            <div class="panel-status">
+                <span class="status-dot"></span>
+                <span id="statusText">
+                    Terrain editor ready
+                </span>
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- CENTER NOTIFICATION TOAST (matches index.html) -->
+    <div id="toolNotification" class="tool-notification">
+        <span class="notification-icon">✓</span>
+        <div>
+            <div id="notificationText">Elevation Colours</div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script type="module" src="render.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

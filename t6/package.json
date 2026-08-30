@@ -1,0 +1,21 @@
+{
+  "name": "new_tactical3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "render.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "milsymbol": "^3.0.4"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}

@@ -1,0 +1,378 @@
+{
+  "version": "1.0",
+
+  "panel": {
+    "id": "terrainTools",
+    "title": "TERRAIN TOOLS",
+    "subtitle": "TERRAIN EDITOR",
+    "icon": "◈"
+  },
+
+  "sections": [
+
+    {
+      "id": "terrainView",
+      "title": "TERRAIN VIEW",
+      "icon": "◒",
+      "items": [
+        {
+          "id": "terrainExaggeration",
+          "type": "button",
+          "label": "Exaggerate",
+          "value": "1.0×"
+        },
+        {
+          "id": "elevationColours",
+          "type": "button",
+          "label": "Elevation colours"
+        },
+        {
+          "id": "slopeShading",
+          "type": "button",
+          "label": "Slope shading"
+        },
+        {
+          "id": "contours",
+          "type": "button",
+          "label": "Contours"
+        },
+        {
+          "id": "waterLevel",
+          "type": "button",
+          "label": "Water level",
+          "wide": true
+        }
+      ]
+    },
+
+    {
+      "id": "sculptBrush",
+      "title": "SCULPT BRUSH",
+      "icon": "✦",
+      "items": [
+        {
+          "id": "modifyTerrain",
+          "type": "mode",
+          "label": "Modify terrain",
+          "icon": "◇"
+        },
+        {
+          "id": "brushRaise",
+          "type": "mode",
+          "label": "Brush: RAISE",
+          "icon": "▲"
+        },
+        {
+          "id": "radius",
+          "type": "number",
+          "label": "Radius",
+          "value": 1500,
+          "unit": "m",
+          "step": 100
+        },
+        {
+          "id": "power",
+          "type": "number",
+          "label": "Power",
+          "value": 2,
+          "unit": "m",
+          "step": 0.5
+        },
+        {
+          "id": "maxHeight",
+          "type": "number",
+          "label": "Max height",
+          "value": 499,
+          "unit": "m",
+          "step": 1
+        },
+        {
+          "id": "undo",
+          "type": "button",
+          "label": "Undo",
+          "icon": "↶"
+        },
+        {
+          "id": "redo",
+          "type": "button",
+          "label": "Redo",
+          "icon": "↷"
+        },
+        {
+          "id": "resetTerrain",
+          "type": "button",
+          "label": "Reset terrain",
+          "icon": "↻",
+          "wide": true
+        }
+      ]
+    },
+
+    {
+      "id": "shapingTools",
+      "title": "SHAPING TOOLS",
+      "icon": "⌁",
+      "items": [
+        {
+          "id": "gradeRoad",
+          "type": "button",
+          "label": "Grade path: ROAD",
+          "icon": "╱"
+        },
+        {
+          "id": "gradeFlatten",
+          "type": "button",
+          "label": "Grade flatten",
+          "icon": "━"
+        },
+        {
+          "id": "pathWidth",
+          "type": "number",
+          "label": "PATH WIDTH",
+          "value": 500,
+          "unit": "m",
+          "step": 10
+        },
+        {
+          "id": "digDepth",
+          "type": "number",
+          "label": "DIG DEPTH",
+          "value": 0,
+          "unit": "m",
+          "description": "+down"
+        },
+        {
+          "id": "stampDome",
+          "type": "button",
+          "label": "Stamp: DOME"
+        },
+        {
+          "id": "crossSection",
+          "type": "button",
+          "label": "Cross-section"
+        },
+        {
+          "id": "regionOffset",
+          "type": "button",
+          "label": "Region offset"
+        },
+        {
+          "id": "regionUp",
+          "type": "button",
+          "label": "Rgn up"
+        },
+        {
+          "id": "regionDown",
+          "type": "button",
+          "label": "Rgn dn"
+        }
+      ]
+    },
+
+    {
+      "id": "erosionEarthwork",
+      "title": "EROSION / EARTHWORK",
+      "icon": "≈",
+      "items": [
+        {
+          "id": "erodeWater",
+          "type": "button",
+          "label": "Erode (water)"
+        },
+        {
+          "id": "talus",
+          "type": "button",
+          "label": "Talus"
+        },
+        {
+          "id": "balanceCutFill",
+          "type": "button",
+          "label": "Balance cut/fill",
+          "wide": true
+        }
+      ]
+    },
+
+    {
+      "id": "symbols",
+      "title": "SYMBOLS",
+      "icon": "✥",
+      "items": [
+        {
+          "id": "radar",
+          "type": "symbolCategory",
+          "label": "Radar",
+          "icon": "◈",
+          "symbols": [
+            {
+              "id": "groundSurveillanceRadar",
+              "name": "Ground Surveillance Radar",
+              "sidc": "10035000001103000800"
+            },
+            {
+              "id": "earlyWarningRadar",
+              "name": "Early Warning Radar",
+              "sidc": "10035000001103001600"
+            },
+            {
+              "id": "fireControlRadar",
+              "name": "Fire Control Radar",
+              "sidc": "10035000001103001700"
+            },
+            {
+              "id": "airDefenseRadar",
+              "name": "Air Defense Radar",
+              "sidc": "10035000001103000100"
+            }
+          ]
+        },
+
+        {
+          "id": "tank",
+          "type": "symbolCategory",
+          "label": "Tank",
+          "icon": "▣",
+          "symbols": [
+            {
+              "id": "tank",
+              "name": "Tank",
+              "sidc": "10031500001202000000"
+            },
+            {
+              "id": "lightTank",
+              "name": "Light Tank",
+              "sidc": "10031500001202010000"
+            },
+            {
+              "id": "mediumTank",
+              "name": "Medium Tank",
+              "sidc": "10031500001202020000"
+            },
+            {
+              "id": "heavyTank",
+              "name": "Heavy Tank",
+              "sidc": "10031500001202030000"
+            }
+          ]
+        },
+
+        {
+          "id": "missile",
+          "type": "symbolCategory",
+          "label": "Missile",
+          "icon": "▲",
+          "symbols": [
+            {
+              "id": "missile",
+              "name": "Missile",
+              "sidc": "10030200001100000000"
+            },
+            {
+              "id": "surfaceToSurfaceMissile",
+              "name": "Surface-to-Surface Missile",
+              "sidc": "10030200001100000202"
+            },
+            {
+              "id": "surfaceToAirMissile",
+              "name": "Surface-to-Air Missile",
+              "sidc": "10030200001100000201"
+            },
+            {
+              "id": "airToSurfaceMissile",
+              "name": "Air-to-Surface Missile",
+              "sidc": "10030200001100000102"
+            }
+          ]
+        },
+
+        {
+          "id": "sam",
+          "type": "symbolCategory",
+          "label": "SAM",
+          "icon": "△",
+          "symbols": [
+            {
+              "id": "surfaceToAirMissile",
+              "name": "Surface-to-Air Missile",
+              "sidc": "10030200001100000201"
+            },
+            {
+              "id": "shortRangeSam",
+              "name": "Short Range SAM",
+              "sidc": "10031500001111010000"
+            },
+            {
+              "id": "mediumAirDefenseMissileLauncher",
+              "name": "Medium Air Defense Missile Launcher",
+              "sidc": "10031500001111040000"
+            },
+            {
+              "id": "s400",
+              "name": "S-400 / SA-21",
+              "sidc": "10031500001111030000"
+            }
+          ]
+        },
+
+        {
+          "id": "bomber",
+          "type": "symbolCategory",
+          "label": "Bomber",
+          "icon": "✈",
+          "wide": true,
+          "symbols": [
+            {
+              "id": "bomber",
+              "name": "Bomber",
+              "sidc": "10030100001101030000"
+            },
+            {
+              "id": "fighterBomber",
+              "name": "Fighter-Bomber",
+              "sidc": "10030100001101050000"
+            },
+            {
+              "id": "attackStrikeAircraft",
+              "name": "Attack / Strike Aircraft",
+              "sidc": "10030100001101020000"
+            },
+            {
+              "id": "reconnaissanceAircraft",
+              "name": "Reconnaissance Aircraft",
+              "sidc": "10030100001101110000"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "selectionMask",
+      "title": "SELECTION / MASK",
+      "icon": "⌾",
+      "items": [
+        {
+          "id": "polygonSelect",
+          "type": "button",
+          "label": "Polygon select"
+        },
+        {
+          "id": "mask",
+          "type": "toggle",
+          "label": "Mask",
+          "value": false,
+          "onLabel": "Mask: ON",
+          "offLabel": "Mask: OFF"
+        }
+      ]
+    }
+  ],
+
+  "status": {
+    "defaultText": "Terrain editor ready",
+    "notification": {
+      "icon": "✓",
+      "subtitle": "TOOL SELECTED"
+    }
+  }
+}

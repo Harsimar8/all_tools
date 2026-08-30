@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrain Tools - Tactical Suite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- Map Container (must exist before render.js/script.js run) -->
+    <div id="map"></div>
+
+    <!-- DUAL-COLUMN TACTICAL DOCK (RESIZABLE) -->
+    <aside class="tactical-menu-dock">
+
+        <!-- COLUMN 1: LEFT CATEGORY RAIL -->
+        <!-- render.js fills this in (rail buttons + detach button + close button) -->
+        <div id="categoryRail" class="category-rail"></div>
+
+        <!-- COLUMN 2: ACTIVE TOOL DRAWER -->
+        <div class="tool-drawer">
+            <!-- PANEL HEADER -->
+            <div id="panelHeaderContainer"></div>
+
+            <!-- DYNAMIC SECTIONS -->
+            <div id="dynamicPanelContent"></div>
+
+            <!-- STATUS BAR -->
+            <div class="panel-status">
+                <span class="status-dot"></span>
+                <span id="statusText">Terrain editor ready</span>
+            </div>
+        </div>
+
+        <!-- DRAGGABLE CORNER RESIZE HANDLE -->
+        <div id="dockResizeHandle" class="dock-resize-handle" title="Drag to resize"></div>
+
+    </aside>
+
+    <!-- CENTER NOTIFICATION TOAST -->
+    <div id="toolNotification" class="tool-notification">
+        <span class="notification-icon">✓</span>
+        <div id="notificationText">Elevation Colours</div>
+    </div>
+
+    <!-- Leaflet JS (must load before render.js / script.js) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- App scripts -->
+    <script type="module" src="render.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

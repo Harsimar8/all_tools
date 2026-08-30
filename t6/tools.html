@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactical Suite - Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin: 0; background: #0b0f19; overflow: hidden;">
+
+    <!-- Control Panel Dock taking full screen of the popup window -->
+    <div class="tactical-menu-dock" style="width: 100vw; height: 100vh; max-width: none; max-height: none; border-radius: 0; position: absolute; top: 0; left: 0;">
+        <div id="panelHeaderContainer"></div>
+        <div class="dock-body-wrapper" style="display: flex; height: calc(100% - 60px);">
+            <div id="categoryRail" class="category-rail"></div>
+            <div id="dynamicPanelContent" class="dynamic-panel-content" style="flex-grow: 1; overflow-y: auto;"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="importmap">
+        {
+            "imports": {
+                "milsymbol": "https://cdn.jsdelivr.net/npm/milsymbol@2.0.0/dist/milsymbol.js"
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+    <script type="module" src="render.js"></script>
+</body>
+</html>

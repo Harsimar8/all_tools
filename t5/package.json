@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "milsymbol": "^3.0.4"
+  },
+  "devDependencies": {
+    "vite": "^7.3.6"
+  },
+  "name": "new_tactical2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "render.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
