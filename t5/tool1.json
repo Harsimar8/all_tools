@@ -1,12 +1,15 @@
 {
   "version": "1.0",
+
   "panel": {
     "id": "terrainTools",
     "title": "TERRAIN TOOLS",
     "subtitle": "TERRAIN EDITOR",
     "icon": "◈"
   },
+
   "sections": [
+
     {
       "id": "terrainView",
       "title": "TERRAIN VIEW",
@@ -41,6 +44,7 @@
         }
       ]
     },
+
     {
       "id": "sculptBrush",
       "title": "SCULPT BRUSH",
@@ -103,6 +107,7 @@
         }
       ]
     },
+
     {
       "id": "shapingTools",
       "title": "SHAPING TOOLS",
@@ -163,6 +168,7 @@
         }
       ]
     },
+
     {
       "id": "erosionEarthwork",
       "title": "EROSION / EARTHWORK",
@@ -186,6 +192,7 @@
         }
       ]
     },
+
     {
       "id": "symbols",
       "title": "SYMBOLS",
@@ -229,92 +236,13 @@
             },
             {
               "id": "lgci",
-              "name": "LGCI",
+              "name": "LimitedGroundControlledInterceptionRadar",
               "sidc": "10035200001103001000"
             }
           ]
         },
-        {
-          "id": "strikeCorps",
-          "type": "symbolCategory",
-          "label": "Strike Corps",
-          "icon": "▦",
-          "symbols": [
-            {
-              "name": "Strike Corps",
-              "type": "Strike Corps",
-              "sidc": "10031000220000000000"
-            },
-            {
-              "name": "Armoured Division",
-              "type": "division",
-              "sidc": "10031000211205000000"
-            },
-            {
-              "name": "Infantry Division1",
-              "type": "division",
-              "sidc": "10031000211211000000"
-            },
-            {
-              "name": "Infantry Division2",
-              "type": "division",
-              "sidc": "10031000211211000000"
-            },
-            {
-              "name": "Mechanized Brigade",
-              "type": "brigade",
-              "sidc": "10031000181211040000"
-            },
-            {
-              "name": "Artillery Brigade",
-              "type": "brigade",
-              "sidc": "10031000181303000000"
-            },
-            {
-              "name": "CAAD Brigade",
-              "type": "brigade",
-              "sidc": "10031000181301000000"
-            },
-            {
-              "name": "Engineer Brigade",
-              "type": "brigade",
-              "sidc": "10031000181407000000"
-            },
-            {
-              "name": "Infantry Formation",
-              "type": "formation",
-              "sidc": "10031000181211000000"
-            }
-          ]
-        },
-        {
-          "id": "holdingCorps",
-          "type": "symbolCategory",
-          "label": "Holding Corps",
-          "icon": "▦",
-          "symbols": [
-            {
-              "name": "Holding Corps",
-              "type": "corps",
-              "sidc": "10031000220000000000"
-            },
-            {
-              "name": "CAAD Unit",
-              "type": "unit",
-              "sidc": "10031000181301000000"
-            },
-            {
-              "name": "Armoured Brigade 1",
-              "type": "brigade",
-              "sidc": "10031000181205000000"
-            },
-            {
-              "name": "Armoured Brigade 2",
-              "type": "brigade",
-              "sidc": "10031000181205000000"
-            }
-          ]
-        },
+
+
         {
           "id": "tank",
           "type": "symbolCategory",
@@ -343,6 +271,7 @@
             }
           ]
         },
+
         {
           "id": "missile",
           "type": "symbolCategory",
@@ -372,34 +301,31 @@
           ]
         },
         {
-          "id": "aircraft",
-          "type": "symbolCategory",
-          "label": "Aircraft",
-          "icon": "✈",
-          "symbols": [
-            {
-              "id": "fighter-aircraft",
-              "name": "Fighter Aircraft",
-              "sidc": "SFA-MFF---"
-            },
-            {
-              "id": "transport-aircraft",
-              "name": "Transport Aircraft",
-              "sidc": "SFA-MFC---"
-            }
-          ]
-        },
+  "id": "aircraft",
+  "type": "symbolCategory",
+  "label": "Aircraft",
+  "icon": "✈",
+  "symbols": [
+   {
+  "id": "fighter-aircraft",
+  "label": "Fighter Aircraft",
+  "type": "symbol",
+  "sidc": "SFA-MFF---"
+},
+{
+  "id": "transport-aircraft",
+  "label": "Transport Aircraft",
+  "type": "symbol",
+  "sidc": "SFA-MFC---"
+}
+  ]
+},
         {
           "id": "sam",
           "type": "symbolCategory",
           "label": "SAM",
           "icon": "△",
           "symbols": [
-            {
-              "id": "medium-range-surface-to-air-missile",
-              "name": "MRSAM",
-              "sidc": "10031500001111040000"
-            },
             {
               "id": "surfaceToAirMissile",
               "name": "Surface-to-Air Missile",
@@ -422,6 +348,7 @@
             }
           ]
         },
+
         {
           "id": "bomber",
           "type": "symbolCategory",
@@ -453,6 +380,7 @@
         }
       ]
     },
+
     {
       "id": "selectionMask",
       "title": "SELECTION / MASK",
@@ -474,6 +402,7 @@
       ]
     }
   ],
+
   "status": {
     "defaultText": "Terrain editor ready",
     "notification": {
