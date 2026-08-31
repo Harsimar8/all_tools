@@ -67,7 +67,7 @@ function setSlope(enabled) {
 // WATER LEVEL
 // =============================================================
 function setWaterLevel(value) {
-    console.log("MAP ACTION → Water Level:", value);
+    console.log("MAP ACTION -> Water Level:", value);
 
     // =========================================================
     // REAL LEAFLET CODE WILL GO HERE
@@ -79,8 +79,7 @@ function setWaterLevel(value) {
 // SYMBOL PLACEMENT (used by script.js's map click listener)
 // =============================================================
 // Called every time the map is clicked while a symbol card is
-// armed (window.selectedTacticalSymbol is set). Drops a marker
-// rendered with the same milsymbol glyph shown on the card.
+// armed. Renders the symbol standing upright with a ground stem.
 // =============================================================
 function placeSymbol({ map, latlng, symbol }) {
     if (!map || !latlng || !symbol || !symbol.sidc) {
@@ -90,12 +89,12 @@ function placeSymbol({ map, latlng, symbol }) {
 
     console.log("MAP ACTION → Place Symbol:", symbol.name, latlng);
 
-    let glyphHtml;
+    let glyphSvg;
     try {
-        glyphHtml = new ms.Symbol(symbol.sidc, { size: 30 }).asSVG();
+        glyphSvg = new ms.Symbol(symbol.sidc, { size: 30 }).asSVG();
     } catch (error) {
         console.warn("MilSymbol failed to render for placement:", symbol.sidc, error);
-        glyphHtml = `
+        glyphSvg = `
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a6b4ff" stroke-width="2">
                 <circle cx="12" cy="12" r="8"/>
                 <path d="M12 2v20"/>
@@ -104,11 +103,23 @@ function placeSymbol({ map, latlng, symbol }) {
         `;
     }
 
+    // Replicating the exact reference layout: 
+    // [Green Status Bar] -> [Symbol Box] -> [Vertical Ground Stem Pin]
+    const standingHtml = `
+        <div style="display: flex; flex-direction: column; align-items: center; pointer-events: none;">
+            <div style="width: 18px; height: 3px; background-color: #22c55e; margin-bottom: 2px; border-radius: 1px; box-shadow: 0 0 3px rgba(34,197,94,0.6);"></div>
+            <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid #38bdf8; padding: 2px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                ${glyphSvg}
+            </div>
+            <div style="width: 2px; height: 16px; background-color: #38bdf8; box-shadow: 0 0 4px rgba(0,0,0,0.5);"></div>
+        </div>
+    `;
+
     const icon = L.divIcon({
-        html: glyphHtml,
-        className: "tactical-map-symbol-icon",
-        iconSize: [30, 30],
-        iconAnchor: [15, 15]
+        html: standingHtml,
+        className: "tactical-map-standing-symbol",
+        iconSize: [30, 55],       // Total height including status bar and stem
+        iconAnchor: [15, 55]      // Anchored strictly at the bottom tip of the stem on the map coordinate
     });
 
     const marker = L.marker(latlng, {
@@ -120,10 +131,9 @@ function placeSymbol({ map, latlng, symbol }) {
     marker.bindTooltip(symbol.name || "Symbol", {
         permanent: false,
         direction: "top",
-        offset: [0, -14]
+        offset: [0, -35]
     });
 
-    // Right-click (contextmenu) to remove a placed symbol
     marker.on("contextmenu", () => {
         map.removeLayer(marker);
         window.placedSymbols = (window.placedSymbols || []).filter(m => m !== marker);
@@ -133,13 +143,8 @@ function placeSymbol({ map, latlng, symbol }) {
     window.placedSymbols.push(marker);
 }
 
-
 // =============================================================
 // TOOL ACTIONS MAP
-// =============================================================
-// Keyed by tools.json item "id". script.js calls:
-//   toolActions[data.id](actionValue)
-// Add a new entry here any time you add a new tool id in tools.json.
 // =============================================================
 export const toolActions = {
     brushRadius: setBrushRadius,
