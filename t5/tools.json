@@ -227,6 +227,7 @@
           ]
         },
 
+
         {
           "id": "tank",
           "type": "symbolCategory",
@@ -284,7 +285,26 @@
             }
           ]
         },
-
+        {
+  "id": "aircraft",
+  "type": "symbolCategory",
+  "label": "Aircraft",
+  "icon": "✈",
+  "symbols": [
+   {
+  "id": "fighter-aircraft",
+  "label": "Fighter Aircraft",
+  "type": "symbol",
+  "sidc": "SFA-MFF---"
+},
+{
+  "id": "transport-aircraft",
+  "label": "Transport Aircraft",
+  "type": "symbol",
+  "sidc": "SFA-MFC---"
+}
+  ]
+},
         {
           "id": "sam",
           "type": "symbolCategory",
